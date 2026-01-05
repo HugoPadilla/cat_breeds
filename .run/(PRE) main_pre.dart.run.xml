@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="(PRE) main_pre.dart" type="FlutterRunConfigurationType"
+        factoryName="Flutter">
+        <option name="buildFlavor" value="pre" />
+        <option name="filePath" value="$PROJECT_DIR$/lib/main_pre.dart" />
+        <method v="2" />
+    </configuration>
+</component>
