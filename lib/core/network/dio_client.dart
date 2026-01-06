@@ -1,9 +1,10 @@
 import 'package:cat_breeds/config/environment_config.dart';
+import 'package:cat_breeds/core/network/api_client.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
-@singleton
-class DioClient {
+@LazySingleton(as: ApiClient)
+class DioClient implements ApiClient {
   late final Dio _dio;
 
   DioClient() {
@@ -25,5 +26,15 @@ class DioClient {
     );
   }
 
-  Dio get dio => _dio;
+  @override
+  Future<dynamic> get(
+    String path, {
+    Map<String, dynamic>? queryParameters,
+  }) async {
+    final Response<dynamic> response = await _dio.get(
+      path,
+      queryParameters: queryParameters,
+    );
+    return response.data;
+  }
 }
