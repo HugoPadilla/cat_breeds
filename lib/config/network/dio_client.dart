@@ -17,7 +17,7 @@ class DioClient {
 
     _dio.interceptors.add(
       InterceptorsWrapper(
-        onRequest: (options, handler) {
+        onRequest: (RequestOptions options, RequestInterceptorHandler handler) {
           options.headers['x-api-key'] = EnvironmentConfig.apiKey;
           return handler.next(options);
         },
