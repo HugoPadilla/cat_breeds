@@ -1,7 +1,6 @@
+import 'package:cat_breeds/config/flavor_config.dart';
+import 'package:cat_breeds/config/flavor_enum.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-
-import 'flavor_config.dart';
-import 'flavor_enum.dart';
 
 abstract class EnvironmentConfig {
   static late final FlavorEnum flavor;

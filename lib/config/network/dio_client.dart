@@ -1,7 +1,6 @@
+import 'package:cat_breeds/config/environment_config.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-
-import '../environment_config.dart';
 
 @singleton
 class DioClient {
