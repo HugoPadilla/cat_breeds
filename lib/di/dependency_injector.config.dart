@@ -16,10 +16,6 @@ import '../core/network/api_client.dart' as _i510;
 import '../core/network/dio_client.dart' as _i393;
 import '../features/cat_breeds/data/datasources/cat_breeds_datasource.dart'
     as _i471;
-import '../features/cat_breeds/domain/datasources/cat_breeds_datasource.dart'
-    as _i401;
-import '../features/cat_breeds/data/datasources/cat_breeds_datasource.dart'
-    as _i471;
 import '../features/cat_breeds/data/repositories/cat_breeds_repository_impl.dart'
     as _i454;
 import '../features/cat_breeds/domain/datasources/cat_breeds_datasource.dart'
@@ -39,9 +35,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i510.ApiClient>(() => _i393.DioClient());
     gh.lazySingleton<_i401.CatBreedsDatasource>(
       () => _i471.CatBreedsDatasourceImpl(gh<_i510.ApiClient>()),
-    );
-    gh.lazySingleton<_i401.CatBreedsDatasource>(
-      () => _i471.CatBreedsDatasourceImpl(gh<_i601.DioClient>()),
     );
     gh.lazySingleton<_i1057.CatBreedsRepository>(
       () => _i454.CatBreedsRepositoryImpl(gh<_i401.CatBreedsDatasource>()),
