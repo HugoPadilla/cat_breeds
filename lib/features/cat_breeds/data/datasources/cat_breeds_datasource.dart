@@ -1,6 +1,6 @@
 import 'package:cat_breeds/config/network/dio_client.dart';
+import 'package:cat_breeds/features/cat_breeds/data/models/cat_breed_dto.dart';
 import 'package:cat_breeds/features/cat_breeds/domain/datasources/cat_breeds_datasource.dart';
-import 'package:cat_breeds/features/cat_breeds/infrastructure/models/cat_breed_dto.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/src/response.dart';
 import 'package:injectable/injectable.dart';
