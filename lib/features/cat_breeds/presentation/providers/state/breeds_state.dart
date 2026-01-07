@@ -6,7 +6,7 @@ part 'breeds_state.freezed.dart';
 enum BreedsStatus { initial, loading, success, error }
 
 @freezed
-class BreedsState with _$BreedsState {
+abstract class BreedsState with _$BreedsState {
   const factory BreedsState({
     @Default(BreedsStatus.initial) BreedsStatus status,
     @Default([]) List<CatBreed> breeds,
@@ -14,5 +14,6 @@ class BreedsState with _$BreedsState {
     @Default('') String errorMessage,
     @Default(false) bool isLoadingMore,
     @Default('') String searchQuery,
+    @Default(0) int page,
   }) = _BreedsState;
 }

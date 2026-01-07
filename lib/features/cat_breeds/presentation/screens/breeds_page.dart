@@ -35,7 +35,7 @@ class _BreedsPageState extends ConsumerState<BreedsPage> {
 
   void _onScroll() {
     if (_isBottom) {
-      ref.read(breedsNotifierProvider.notifier).getBreeds();
+      ref.read(breedsProvider.notifier).getBreeds();
     }
   }
 
@@ -48,7 +48,7 @@ class _BreedsPageState extends ConsumerState<BreedsPage> {
 
   @override
   Widget build(BuildContext context) {
-    final BreedsState state = ref.watch(breedsNotifierProvider);
+    final BreedsState state = ref.watch(breedsProvider);
     final List<CatBreed> breeds = state.breeds;
     final AppLocalizations l10n = AppLocalizations.of(context)!;
 
@@ -63,7 +63,7 @@ class _BreedsPageState extends ConsumerState<BreedsPage> {
         children: <Widget>[
           SearchBarMolecule(
             onChanged: (String value) {
-              ref.read(breedsNotifierProvider.notifier).onSearchChanged(value);
+              ref.read(breedsProvider.notifier).onSearchChanged(value);
             },
           ),
           Expanded(
@@ -77,7 +77,7 @@ class _BreedsPageState extends ConsumerState<BreedsPage> {
                   return AdaptiveRetryWidget(
                     message: state.errorMessage,
                     onRetry: () {
-                      ref.read(breedsNotifierProvider.notifier).getBreeds();
+                      ref.read(breedsProvider.notifier).getBreeds();
                     },
                   );
                 }
