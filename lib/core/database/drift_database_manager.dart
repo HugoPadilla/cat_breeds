@@ -1,5 +1,5 @@
+import 'package:cat_breeds/core/database/app_database.dart';
 import 'package:cat_breeds/di/dependency_injector.dart';
-import 'package:cat_breeds/infrastructure/drift_database/app_database.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class DriftDatabaseManager {

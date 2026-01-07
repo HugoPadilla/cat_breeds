@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:cat_breeds/config/database/database_util.dart';
-import 'package:cat_breeds/infrastructure/drift_database/app_database.dart';
+import 'package:cat_breeds/core/database/app_database.dart';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:injectable/injectable.dart';

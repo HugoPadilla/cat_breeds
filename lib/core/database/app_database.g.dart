@@ -1643,6 +1643,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
 
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
   late final $CatBreedsTableTable catBreedsTable = $CatBreedsTableTable(this);
+  late final CatBreedsDao catBreedsDao = CatBreedsDao(this as AppDatabase);
 
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>

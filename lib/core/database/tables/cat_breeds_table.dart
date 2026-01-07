@@ -1,7 +1,5 @@
 import 'package:drift/drift.dart';
 
-part 'app_database.g.dart';
-
 class CatBreedsTable extends Table {
   TextColumn get id => text()();
 
@@ -63,12 +61,4 @@ class CatBreedsTable extends Table {
 
   @override
   Set<Column> get primaryKey => <Column<Object>>{id};
-}
-
-@DriftDatabase(tables: <Type>[CatBreedsTable])
-class AppDatabase extends _$AppDatabase {
-  AppDatabase(super.e);
-
-  @override
-  int get schemaVersion => 1;
 }
