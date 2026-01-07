@@ -61,6 +61,9 @@ jobs:
       - name: Run Tests
         run: flutter test
 
+      - name: Create .env file
+        run: echo "${{ secrets.ENV_PROD }}" > .env
+
       - name: Decode Keystore
         run: |
           echo "${{ secrets.KEYSTORE_PROD_BASE64 }}" | base64 --decode > android/app/keystore.jks
