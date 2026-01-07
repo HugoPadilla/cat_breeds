@@ -1,3 +1,18 @@
 {
-  "appTitle": "Página principal de Flutter Demo"
+  "appTitle": "Página principal de Flutter Demo",
+  "catBreedsTitle": "Razas de Gatos",
+  "searchHint": "Buscar...",
+  "noBreedsFound": "No se encontraron razas.",
+  "retry": "Reintentar",
+  "more": "Más...",
+  "origin": "Origen",
+  "intelligence": "Inteligencia",
+  "description": "Descripción",
+  "details": "Detalles",
+  "lifeSpan": "Esperanza de vida",
+  "years": "años",
+  "adaptability": "Adaptabilidad",
+  "originWithValue": "Origen: {origin}",
+  "intelligenceWithValue": "Inteligencia: {level}",
+  "ratingOutOfFive": "{rating} / 5"
 }

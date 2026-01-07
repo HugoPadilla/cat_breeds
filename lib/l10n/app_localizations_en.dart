@@ -11,4 +11,55 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appTitle => 'Flutter Demo Home Page';
+
+  @override
+  String get catBreedsTitle => 'Cat Breeds';
+
+  @override
+  String get searchHint => 'Search...';
+
+  @override
+  String get noBreedsFound => 'No breeds found.';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get more => 'More...';
+
+  @override
+  String get origin => 'Origin';
+
+  @override
+  String get intelligence => 'Intelligence';
+
+  @override
+  String get description => 'Description';
+
+  @override
+  String get details => 'Details';
+
+  @override
+  String get lifeSpan => 'Life Span';
+
+  @override
+  String get years => 'years';
+
+  @override
+  String get adaptability => 'Adaptability';
+
+  @override
+  String originWithValue(String origin) {
+    return 'Origin: $origin';
+  }
+
+  @override
+  String intelligenceWithValue(int level) {
+    return 'Intelligence: $level';
+  }
+
+  @override
+  String ratingOutOfFive(int rating) {
+    return '$rating / 5';
+  }
 }

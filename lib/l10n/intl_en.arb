@@ -1,3 +1,39 @@
 {
-  "appTitle": "Flutter Demo Home Page"
+  "appTitle": "Flutter Demo Home Page",
+  "catBreedsTitle": "Cat Breeds",
+  "searchHint": "Search...",
+  "noBreedsFound": "No breeds found.",
+  "retry": "Retry",
+  "more": "More...",
+  "origin": "Origin",
+  "intelligence": "Intelligence",
+  "description": "Description",
+  "details": "Details",
+  "lifeSpan": "Life Span",
+  "years": "years",
+  "adaptability": "Adaptability",
+  "originWithValue": "Origin: {origin}",
+  "@originWithValue": {
+    "placeholders": {
+      "origin": {
+        "type": "String"
+      }
+    }
+  },
+  "intelligenceWithValue": "Intelligence: {level}",
+  "@intelligenceWithValue": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "ratingOutOfFive": "{rating} / 5",
+  "@ratingOutOfFive": {
+    "placeholders": {
+      "rating": {
+        "type": "int"
+      }
+    }
+  }
 }

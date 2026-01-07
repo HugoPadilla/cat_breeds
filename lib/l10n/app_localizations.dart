@@ -103,6 +103,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Flutter Demo Home Page'**
   String get appTitle;
+
+  /// No description provided for @catBreedsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Cat Breeds'**
+  String get catBreedsTitle;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search...'**
+  String get searchHint;
+
+  /// No description provided for @noBreedsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No breeds found.'**
+  String get noBreedsFound;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// No description provided for @more.
+  ///
+  /// In en, this message translates to:
+  /// **'More...'**
+  String get more;
+
+  /// No description provided for @origin.
+  ///
+  /// In en, this message translates to:
+  /// **'Origin'**
+  String get origin;
+
+  /// No description provided for @intelligence.
+  ///
+  /// In en, this message translates to:
+  /// **'Intelligence'**
+  String get intelligence;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get description;
+
+  /// No description provided for @details.
+  ///
+  /// In en, this message translates to:
+  /// **'Details'**
+  String get details;
+
+  /// No description provided for @lifeSpan.
+  ///
+  /// In en, this message translates to:
+  /// **'Life Span'**
+  String get lifeSpan;
+
+  /// No description provided for @years.
+  ///
+  /// In en, this message translates to:
+  /// **'years'**
+  String get years;
+
+  /// No description provided for @adaptability.
+  ///
+  /// In en, this message translates to:
+  /// **'Adaptability'**
+  String get adaptability;
+
+  /// No description provided for @originWithValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Origin: {origin}'**
+  String originWithValue(String origin);
+
+  /// No description provided for @intelligenceWithValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Intelligence: {level}'**
+  String intelligenceWithValue(int level);
+
+  /// No description provided for @ratingOutOfFive.
+  ///
+  /// In en, this message translates to:
+  /// **'{rating} / 5'**
+  String ratingOutOfFive(int rating);
 }
 
 class _AppLocalizationsDelegate
