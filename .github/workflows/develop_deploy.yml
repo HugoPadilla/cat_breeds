@@ -58,11 +58,11 @@ jobs:
       - name: Install Dependencies
         run: flutter pub get
 
-      - name: Run Tests
-        run: flutter test
-
       - name: Create .env file
         run: echo "${{ secrets.ENV_DEV }}" > .env
+
+      - name: Run Tests
+        run: flutter test
 
       - name: Decode Keystore
         run: |
