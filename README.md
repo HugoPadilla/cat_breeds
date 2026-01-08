@@ -15,9 +15,10 @@ Mobile Flutter Senior** en Pragma.
 ## 📱 Screenshots
 
 <div style="display: flex; flex-direction: row; gap: 10px; overflow-x: auto;">
-  <img src="assets/screenshots/landing.png" alt="Landing Page" width="200"/>
-  <img src="assets/screenshots/detail.png" alt="Detail View" width="200"/>
-  <img src="assets/screenshots/dark_mode.png" alt="Dark Mode" width="200"/>
+  <img src="assets/screenshots/splash_screen.PNG" alt="Landing Page" width="200"/>
+  <img src="assets/screenshots/landing_screen.PNG" alt="Landing Page" width="200"/>
+  <img src="assets/screenshots/details_screen.PNG" alt="Detail View" width="200"/>
+  <img src="assets/screenshots/details_screen-scroll.PNG" alt="Dark Mode" width="200"/>
 </div>
 
 ---
@@ -192,6 +193,22 @@ producción.
 
 ---
 
+## 🎨 Generación de Assets
+
+### Iconos de App
+
+```bash
+flutter pub run flutter_launcher_icons:main -f flutter_launcher_icons*
+```
+
+### Splash Screen
+
+```bash
+dart run flutter_native_splash:create --flavors dev,pre,prod
+```
+
+---
+
 ## 📦 Comandos de Build y Distribución
 
 Para generar artefactos listos para distribución (Release), asegúrate de usar el flag `--release`.
@@ -224,4 +241,4 @@ continua.
 * **`master_deploy.yml`**: Push a `master`. Ejecuta tests y genera **Prod Release** (AppBundle).
 
 > Los workflows se encargan de inyectar las variables de entorno y las llaves de firma de forma
-segura.
+> segura.
