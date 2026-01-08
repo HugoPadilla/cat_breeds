@@ -10,6 +10,8 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:cat_breeds/core/database/app_database.dart' as _i1011;
+import 'package:cat_breeds/core/database/database_connection_factory.dart'
+    as _i506;
 import 'package:cat_breeds/core/database/database_key_service.dart' as _i82;
 import 'package:cat_breeds/core/database/drift_database_manager.dart' as _i731;
 import 'package:cat_breeds/core/network/api_client.dart' as _i396;
@@ -42,6 +44,9 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final appModule = _$AppModule();
+    gh.factory<_i506.DatabaseConnectionFactory>(
+      () => _i506.DatabaseConnectionFactory(),
+    );
     gh.lazySingleton<_i558.FlutterSecureStorage>(() => appModule.secureStorage);
     gh.lazySingleton<_i731.DriftDatabaseManager>(
       () => _i731.DriftDatabaseManagerImpl(),
@@ -57,7 +62,10 @@ extension GetItInjectableX on _i174.GetIt {
       () => _i82.DatabaseKeyServiceImpl(gh<_i119.SecureStorageService>()),
     );
     gh.lazySingleton<_i1011.AppDatabase>(
-      () => appModule.appDatabase(gh<_i82.DatabaseKeyService>()),
+      () => appModule.appDatabase(
+        gh<_i82.DatabaseKeyService>(),
+        gh<_i506.DatabaseConnectionFactory>(),
+      ),
     );
     gh.lazySingleton<_i862.CatBreedsLocalDatasource>(
       () => _i564.CatBreedsLocalDatasourceImpl(gh<_i1011.AppDatabase>()),
