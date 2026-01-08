@@ -40,10 +40,22 @@ void main() {
         adaptability: 1,
         intelligence: 1,
         imageUrl: 'http://img.com',
+        affectionLevel: 1,
+        childFriendly: 1,
+        dogFriendly: 1,
+        energyLevel: 1,
+        grooming: 1,
+        healthIssues: 1,
+        socialNeeds: 1,
+        strangerFriendly: 1,
+        vocalisation: 1,
       );
 
       when(
-        () => mockUseCase.execute(),
+        () => mockUseCase.execute(
+          page: any(named: 'page'),
+          limit: any(named: 'limit'),
+        ),
       ).thenAnswer((_) async => Right(<CatBreed>[breed]));
 
       await mockNetworkImagesFor(() async {
@@ -60,7 +72,10 @@ void main() {
       WidgetTester tester,
     ) async {
       when(
-        () => mockUseCase.execute(),
+        () => mockUseCase.execute(
+          page: any(named: 'page'),
+          limit: any(named: 'limit'),
+        ),
       ).thenAnswer((_) async => Left(const ServerFailure('Error occurred')));
 
       await tester.pumpApp(const BreedsPage());
@@ -82,10 +97,22 @@ void main() {
         adaptability: 1,
         intelligence: 1,
         imageUrl: 'http://img.com',
+        affectionLevel: 1,
+        childFriendly: 1,
+        dogFriendly: 1,
+        energyLevel: 1,
+        grooming: 1,
+        healthIssues: 1,
+        socialNeeds: 1,
+        strangerFriendly: 1,
+        vocalisation: 1,
       );
 
       when(
-        () => mockUseCase.execute(),
+        () => mockUseCase.execute(
+          page: any(named: 'page'),
+          limit: any(named: 'limit'),
+        ),
       ).thenAnswer((_) async => Right(<CatBreed>[breed]));
 
       await mockNetworkImagesFor(() async {
@@ -104,7 +131,10 @@ void main() {
 
     testWidgets('calls usecase again on retry', (WidgetTester tester) async {
       when(
-        () => mockUseCase.execute(),
+        () => mockUseCase.execute(
+          page: any(named: 'page'),
+          limit: any(named: 'limit'),
+        ),
       ).thenAnswer((_) async => Left(const ServerFailure('Error occurred')));
 
       await tester.pumpApp(const BreedsPage());
@@ -116,7 +146,12 @@ void main() {
       await tester.tap(find.text('Retry'));
       await tester.pump(Duration.zero);
 
-      verify(() => mockUseCase.execute()).called(2);
+      verify(
+        () => mockUseCase.execute(
+          page: any(named: 'page'),
+          limit: any(named: 'limit'),
+        ),
+      ).called(2);
     });
   });
 }

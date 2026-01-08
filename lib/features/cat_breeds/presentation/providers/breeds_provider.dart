@@ -29,8 +29,11 @@ class BreedsNotifier extends _$BreedsNotifier {
       state = state.copyWith(isLoadingMore: true);
     }
 
+    final int pageToLoad = state.page;
+    final int limit = 10;
+
     final Either<ApiFailure, List<CatBreed>> result = await _getCatBreedsUseCase
-        .execute();
+        .execute(page: pageToLoad, limit: limit);
 
     result.fold(
       (ApiFailure failure) {
@@ -51,8 +54,9 @@ class BreedsNotifier extends _$BreedsNotifier {
         state = state.copyWith(
           status: BreedsStatus.success,
           breeds: allBreeds,
-          hasReachedMax: isMax || newBreeds.length < 5,
+          hasReachedMax: isMax || newBreeds.length < limit,
           isLoadingMore: false,
+          page: state.page + 1,
         );
       },
     );

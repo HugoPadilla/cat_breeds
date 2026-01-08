@@ -19,6 +19,15 @@ void main() {
       intelligence: 5,
       adaptability: 5,
       imageUrl: 'https://example.com/abys.jpg',
+      affectionLevel: 5,
+      childFriendly: 5,
+      dogFriendly: 5,
+      energyLevel: 5,
+      grooming: 3,
+      healthIssues: 1,
+      socialNeeds: 5,
+      strangerFriendly: 5,
+      vocalisation: 1,
     );
 
     testWidgets('renders all breed details correctly', (

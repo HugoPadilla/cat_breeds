@@ -6,21 +6,58 @@ part of 'breeds_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$breedsNotifierHash() => r'cf061b4d9828c00665d89374efba1e226440798b';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [BreedsNotifier].
 @ProviderFor(BreedsNotifier)
-final breedsNotifierProvider =
-    AutoDisposeNotifierProvider<BreedsNotifier, BreedsState>.internal(
-      BreedsNotifier.new,
-      name: r'breedsNotifierProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$breedsNotifierHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+final breedsProvider = BreedsNotifierProvider._();
 
-typedef _$BreedsNotifier = AutoDisposeNotifier<BreedsState>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class BreedsNotifierProvider
+    extends $NotifierProvider<BreedsNotifier, BreedsState> {
+  BreedsNotifierProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'breedsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$breedsNotifierHash();
+
+  @$internal
+  @override
+  BreedsNotifier create() => BreedsNotifier();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(BreedsState value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<BreedsState>(value),
+    );
+  }
+}
+
+String _$breedsNotifierHash() => r'738657b19a823cc4b0393a17933200e69324ad08';
+
+abstract class _$BreedsNotifier extends $Notifier<BreedsState> {
+  BreedsState build();
+
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<BreedsState, BreedsState>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<BreedsState, BreedsState>,
+              BreedsState,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}

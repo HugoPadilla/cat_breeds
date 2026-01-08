@@ -10,7 +10,10 @@ class GetCatBreedsUseCase {
 
   GetCatBreedsUseCase(this._repository);
 
-  Future<Either<ApiFailure, List<CatBreed>>> execute() async {
-    return _repository.getBreeds();
+  Future<Either<ApiFailure, List<CatBreed>>> execute({
+    required int page,
+    required int limit,
+  }) async {
+    return _repository.getBreeds(page: page, limit: limit);
   }
 }
