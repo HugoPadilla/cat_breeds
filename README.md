@@ -128,7 +128,7 @@ producción.
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone <url-del-repo>
+   git clone https://github.com/HugoPadilla/cat_breeds.git
    cd cat_breeds
    ```
 
@@ -153,6 +153,12 @@ producción.
    ```properties
    THE_CAT_API_KEY=tu_api_key_real_generada_en_thecatapi
    ```
+   > **⚠️ Advertencia de Seguridad:**
+   > El uso de archivos `.env` para almacenar claves de API en el cliente es **inseguro** y se
+   utiliza aquí únicamente con fines demostrativos.
+   > Tener en cuenta que las variables de entorno empaquetadas en la aplicación pueden ser extraídas
+   mediante **ingeniería inversa** de los binarios (APK). Para aplicaciones en producción,
+   considerar usar proxys de backend o soluciones de ofuscación más robustas.
 
 5. **Generar Código (Build Runner & l10n):**
    Este proyecto usa generación de código extensiva.
