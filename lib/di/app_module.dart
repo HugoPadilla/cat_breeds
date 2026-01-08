@@ -15,7 +15,11 @@ import 'package:sqlite3/sqlite3.dart';
 @module
 abstract class AppModule {
   @lazySingleton
-  FlutterSecureStorage get secureStorage => const FlutterSecureStorage();
+  FlutterSecureStorage get secureStorage => const FlutterSecureStorage(
+    iOptions: IOSOptions(
+      accessibility: KeychainAccessibility.first_unlock_this_device,
+    ),
+  );
 
   @lazySingleton
   AppDatabase appDatabase(DatabaseKeyService keyService) {
