@@ -62,4 +62,67 @@ class AppLocalizationsEn extends AppLocalizations {
   String ratingOutOfFive(int rating) {
     return '$rating / 5';
   }
+
+  @override
+  String get temperament => 'Temperament';
+
+  @override
+  String get affectionLevel => 'Affection Level';
+
+  @override
+  String get childFriendly => 'Child Friendly';
+
+  @override
+  String get dogFriendly => 'Dog Friendly';
+
+  @override
+  String get energyLevel => 'Energy Level';
+
+  @override
+  String get grooming => 'Grooming';
+
+  @override
+  String get healthIssues => 'Health Issues';
+
+  @override
+  String get sheddingLevel => 'Shedding Level';
+
+  @override
+  String get socialNeeds => 'Social Needs';
+
+  @override
+  String get strangerFriendly => 'Stranger Friendly';
+
+  @override
+  String get vocalisation => 'Vocalisation';
+
+  @override
+  String get experimental => 'Experimental';
+
+  @override
+  String get hairless => 'Hairless';
+
+  @override
+  String get natural => 'Natural';
+
+  @override
+  String get rare => 'Rare';
+
+  @override
+  String get rex => 'Rex';
+
+  @override
+  String get suppressedTail => 'Suppressed Tail';
+
+  @override
+  String get shortLegs => 'Short Legs';
+
+  @override
+  String get hypoallergenic => 'Hypoallergenic';
+
+  @override
+  String get wikipedia => 'Wikipedia';
+
+  @override
+  String get characteristics => 'Characteristics';
 }

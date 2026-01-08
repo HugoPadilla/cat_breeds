@@ -35,5 +35,26 @@
         "type": "int"
       }
     }
-  }
+  },
+  "temperament": "Temperament",
+  "affectionLevel": "Affection Level",
+  "childFriendly": "Child Friendly",
+  "dogFriendly": "Dog Friendly",
+  "energyLevel": "Energy Level",
+  "grooming": "Grooming",
+  "healthIssues": "Health Issues",
+  "sheddingLevel": "Shedding Level",
+  "socialNeeds": "Social Needs",
+  "strangerFriendly": "Stranger Friendly",
+  "vocalisation": "Vocalisation",
+  "experimental": "Experimental",
+  "hairless": "Hairless",
+  "natural": "Natural",
+  "rare": "Rare",
+  "rex": "Rex",
+  "suppressedTail": "Suppressed Tail",
+  "shortLegs": "Short Legs",
+  "hypoallergenic": "Hypoallergenic",
+  "wikipedia": "Wikipedia",
+  "characteristics": "Characteristics"
 }

@@ -193,6 +193,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{rating} / 5'**
   String ratingOutOfFive(int rating);
+
+  /// No description provided for @temperament.
+  ///
+  /// In en, this message translates to:
+  /// **'Temperament'**
+  String get temperament;
+
+  /// No description provided for @affectionLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Affection Level'**
+  String get affectionLevel;
+
+  /// No description provided for @childFriendly.
+  ///
+  /// In en, this message translates to:
+  /// **'Child Friendly'**
+  String get childFriendly;
+
+  /// No description provided for @dogFriendly.
+  ///
+  /// In en, this message translates to:
+  /// **'Dog Friendly'**
+  String get dogFriendly;
+
+  /// No description provided for @energyLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy Level'**
+  String get energyLevel;
+
+  /// No description provided for @grooming.
+  ///
+  /// In en, this message translates to:
+  /// **'Grooming'**
+  String get grooming;
+
+  /// No description provided for @healthIssues.
+  ///
+  /// In en, this message translates to:
+  /// **'Health Issues'**
+  String get healthIssues;
+
+  /// No description provided for @sheddingLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Shedding Level'**
+  String get sheddingLevel;
+
+  /// No description provided for @socialNeeds.
+  ///
+  /// In en, this message translates to:
+  /// **'Social Needs'**
+  String get socialNeeds;
+
+  /// No description provided for @strangerFriendly.
+  ///
+  /// In en, this message translates to:
+  /// **'Stranger Friendly'**
+  String get strangerFriendly;
+
+  /// No description provided for @vocalisation.
+  ///
+  /// In en, this message translates to:
+  /// **'Vocalisation'**
+  String get vocalisation;
+
+  /// No description provided for @experimental.
+  ///
+  /// In en, this message translates to:
+  /// **'Experimental'**
+  String get experimental;
+
+  /// No description provided for @hairless.
+  ///
+  /// In en, this message translates to:
+  /// **'Hairless'**
+  String get hairless;
+
+  /// No description provided for @natural.
+  ///
+  /// In en, this message translates to:
+  /// **'Natural'**
+  String get natural;
+
+  /// No description provided for @rare.
+  ///
+  /// In en, this message translates to:
+  /// **'Rare'**
+  String get rare;
+
+  /// No description provided for @rex.
+  ///
+  /// In en, this message translates to:
+  /// **'Rex'**
+  String get rex;
+
+  /// No description provided for @suppressedTail.
+  ///
+  /// In en, this message translates to:
+  /// **'Suppressed Tail'**
+  String get suppressedTail;
+
+  /// No description provided for @shortLegs.
+  ///
+  /// In en, this message translates to:
+  /// **'Short Legs'**
+  String get shortLegs;
+
+  /// No description provided for @hypoallergenic.
+  ///
+  /// In en, this message translates to:
+  /// **'Hypoallergenic'**
+  String get hypoallergenic;
+
+  /// No description provided for @wikipedia.
+  ///
+  /// In en, this message translates to:
+  /// **'Wikipedia'**
+  String get wikipedia;
+
+  /// No description provided for @characteristics.
+  ///
+  /// In en, this message translates to:
+  /// **'Characteristics'**
+  String get characteristics;
 }
 
 class _AppLocalizationsDelegate
