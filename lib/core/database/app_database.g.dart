@@ -8,9 +8,7 @@ class $CatBreedsTableTable extends CatBreedsTable
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
-
   $CatBreedsTableTable(this.attachedDatabase, [this._alias]);
-
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<String> id = GeneratedColumn<String>(
@@ -320,7 +318,6 @@ class $CatBreedsTableTable extends CatBreedsTable
     type: DriftSqlType.string,
     requiredDuringInsert: false,
   );
-
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -353,14 +350,11 @@ class $CatBreedsTableTable extends CatBreedsTable
     hypoallergenic,
     referenceImageId,
   ];
-
   @override
   String get aliasedName => _alias ?? actualTableName;
-
   @override
   String get actualTableName => $name;
   static const String $name = 'cat_breeds_table';
-
   @override
   VerificationContext validateIntegrity(
     Insertable<CatBreedsTableData> instance, {
@@ -630,7 +624,6 @@ class $CatBreedsTableTable extends CatBreedsTable
 
   @override
   Set<GeneratedColumn> get $primaryKey => {id};
-
   @override
   CatBreedsTableData map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
@@ -791,7 +784,6 @@ class CatBreedsTableData extends DataClass
   final String? wikipediaUrl;
   final int? hypoallergenic;
   final String? referenceImageId;
-
   const CatBreedsTableData({
     required this.id,
     required this.name,
@@ -823,7 +815,6 @@ class CatBreedsTableData extends DataClass
     this.hypoallergenic,
     this.referenceImageId,
   });
-
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -978,7 +969,6 @@ class CatBreedsTableData extends DataClass
       referenceImageId: serializer.fromJson<String?>(json['referenceImageId']),
     );
   }
-
   @override
   Map<String, dynamic> toJson({ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
@@ -1084,7 +1074,6 @@ class CatBreedsTableData extends DataClass
         ? referenceImageId.value
         : this.referenceImageId,
   );
-
   CatBreedsTableData copyWithCompanion(CatBreedsTableCompanion data) {
     return CatBreedsTableData(
       id: data.id.present ? data.id.value : this.id,
@@ -1223,7 +1212,6 @@ class CatBreedsTableData extends DataClass
     hypoallergenic,
     referenceImageId,
   ]);
-
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -1290,7 +1278,6 @@ class CatBreedsTableCompanion extends UpdateCompanion<CatBreedsTableData> {
   final Value<int?> hypoallergenic;
   final Value<String?> referenceImageId;
   final Value<int> rowid;
-
   const CatBreedsTableCompanion({
     this.id = const Value.absent(),
     this.name = const Value.absent(),
@@ -1323,7 +1310,6 @@ class CatBreedsTableCompanion extends UpdateCompanion<CatBreedsTableData> {
     this.referenceImageId = const Value.absent(),
     this.rowid = const Value.absent(),
   });
-
   CatBreedsTableCompanion.insert({
     required String id,
     required String name,
@@ -1371,7 +1357,6 @@ class CatBreedsTableCompanion extends UpdateCompanion<CatBreedsTableData> {
        socialNeeds = Value(socialNeeds),
        strangerFriendly = Value(strangerFriendly),
        vocalisation = Value(vocalisation);
-
   static Insertable<CatBreedsTableData> custom({
     Expression<String>? id,
     Expression<String>? name,
@@ -1640,15 +1625,12 @@ class CatBreedsTableCompanion extends UpdateCompanion<CatBreedsTableData> {
 
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
-
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
   late final $CatBreedsTableTable catBreedsTable = $CatBreedsTableTable(this);
   late final CatBreedsDao catBreedsDao = CatBreedsDao(this as AppDatabase);
-
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
-
   @override
   List<DatabaseSchemaEntity> get allSchemaEntities => [catBreedsTable];
 }
@@ -1729,7 +1711,6 @@ class $$CatBreedsTableTableFilterComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-
   ColumnFilters<String> get id => $composableBuilder(
     column: $table.id,
     builder: (column) => ColumnFilters(column),
@@ -1885,7 +1866,6 @@ class $$CatBreedsTableTableOrderingComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-
   ColumnOrderings<String> get id => $composableBuilder(
     column: $table.id,
     builder: (column) => ColumnOrderings(column),
@@ -2041,7 +2021,6 @@ class $$CatBreedsTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-
   GeneratedColumn<String> get id =>
       $composableBuilder(column: $table.id, builder: (column) => column);
 
@@ -2357,9 +2336,7 @@ typedef $$CatBreedsTableTableProcessedTableManager =
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
-
   $AppDatabaseManager(this._db);
-
   $$CatBreedsTableTableTableManager get catBreedsTable =>
       $$CatBreedsTableTableTableManager(_db, _db.catBreedsTable);
 }

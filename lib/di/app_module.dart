@@ -1,9 +1,10 @@
 import 'dart:io';
 
-import 'package:cat_breeds/config/database/database_util.dart';
 import 'package:cat_breeds/core/database/app_database.dart';
+import 'package:cat_breeds/core/database/database_key_service.dart';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:injectable/injectable.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
@@ -14,13 +15,18 @@ import 'package:sqlite3/sqlite3.dart';
 @module
 abstract class AppModule {
   @lazySingleton
-  AppDatabase get appDatabase => AppDatabase(_openConnection());
+  FlutterSecureStorage get secureStorage => const FlutterSecureStorage();
 
-  QueryExecutor _openConnection() {
+  @lazySingleton
+  AppDatabase appDatabase(DatabaseKeyService keyService) {
+    return AppDatabase(_openConnection(keyService));
+  }
+
+  QueryExecutor _openConnection(DatabaseKeyService keyService) {
     return LazyDatabase(() async {
       final Directory dbFolder = await getApplicationDocumentsDirectory();
       final File file = File(p.join(dbFolder.path, 'cat_breeds_v1.sqlite'));
-      final String encryptionKey = await DatabaseUtil.getKeyDatabaseExaSql();
+      final String encryptionKey = await keyService.getDatabaseKey();
 
       return NativeDatabase.createInBackground(
         file,
