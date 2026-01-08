@@ -1,0 +1,12 @@
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo/logo_dev.png"
+  remove_alpha_ios: true
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/logo/logo_dev.png"
+  web:
+    generate: true
+    image_path: "assets/logo/logo.png"
+    background_color: "#ffffff"
+    theme_color: "#ffffff"
